@@ -1,0 +1,175 @@
+{
+  "header-part": [
+    {
+      "header": "henry pap",
+      "fields": [
+        "Systems Software Engineer",
+        { "type": "span", "icon": "map-marker-alt", "text": "stockholm, sweden", "className": "uppercase" },
+        "0737471880"
+      ]
+    }
+  ],
+  "side-part": [
+    {
+      "header": "details",
+      "fields": [
+        "Stockholm, Sweden",
+        "0737471880",
+        "onkelhoy.job@gmail.com"
+      ],
+      "subparts": [
+        {
+          "header": "date / place of birth",
+          "fields": [
+            "1 January 1996",
+            "Kronoberg, Växjö Sweden"
+          ]
+        },
+        {
+          "header": "nationality",
+          "fields": ["Sweden"]
+        },
+        {
+          "header": "driving license",
+          "fields": ["B, AM"]
+        }
+      ]
+    },
+    {
+      "header": "links",
+      "fields": [{ "type": "a", "href": "https://github.com/onkelhoy", "text": "GitHub", "icon": ["fab", "github"] }]
+    },
+    {
+      "header": "skills",
+      "fields": [
+        {
+          "type": "Slider",
+          "label": "JavaScript",
+          "percentage": 1
+        },
+        {
+          "type": "Slider",
+          "label": "C#",
+          "percentage": 0.8
+        },
+        {
+          "type": "Slider",
+          "label": "Java",
+          "percentage": 0.8
+        },
+        {
+          "type": "Slider",
+          "label": "Python",
+          "percentage": 0.6
+        },
+        {
+          "type": "Slider",
+          "label": "React",
+          "percentage": 0.8
+        },
+        {
+          "type": "Slider",
+          "label": "SQL",
+          "percentage": 0.8
+        },
+        {
+          "type": "Slider",
+          "label": "Photoshop",
+          "percentage": 1
+        }
+      ]
+    },
+    {
+      "header": "hobbies",
+      "fields": ["Cooking, Coding, Guitar, Paintball & Boxing"]
+    }
+  ],
+  "main-part": [
+    {
+      "header": { "text": "profile", "icon": "user" },
+      "fields": [
+        "Passionate software engineer, with deep roots in full stack development.",
+        "Fast provider, fast learner, productive and affable"
+      ]
+    },
+    {
+      "header": { "text": "employmen history", "icon": "suitcase" },
+      "subparts": [
+        {
+          "header": "Front-End consult at Ventury Analytics, Stockholm",
+          "fields": [
+            { "type": "DateInterval", "start": "June 2019", "end": "February 2020" },
+            "Worked with finance for startups such as ESOP, Vesting, Cap Table, model financing rounds and compare the economical effects",
+            "Javascript, React, GraphQL, Ant Desgin"
+          ]
+        },
+        {
+          "header": "Back-End developer at Webprefer, Växjö",
+          "fields": [
+            { "type": "DateInterval", "start": "Jan 2019", "end": "May 2019" },
+            "Developed casino administration platform for companies such as BetHard",
+            "C#, .NET, RabbitMQ, mySQL"
+          ]
+        },
+        {
+          "header": "Substitute Teacher at Kommun/Utbildningsförvaltningen, Växjö",
+          "fields": [
+            { "type": "DateInterval", "start": "Aug 2018", "end": "Jan 2019" },
+            "Part-time job while studiyng, math, physics, music, sweidish, english, programming"
+          ]
+        },
+        {
+          "header": "Care Taker at Kommun/Ledsagning, Växjö",
+          "fields": [
+            { "type": "DateInterval", "start": "May 2018", "end": "Mar 2019" },
+            "Part time job, took care of child for family in need. "
+          ]
+        },
+        {
+          "header": "Chef at Burger King, Växjö",
+          "fields": [
+            { "type": "DateInterval", "start": "May 2017", "end": "Sep 2017" },
+            "Part time job, kitchen and cashier "
+          ]
+        }
+      ]
+    },
+    {
+      "header": { "text": "education", "icon": "graduation-cap" },
+      "subparts": [
+        {
+          "header": "Linnéuniversitetet, Växjö",
+          "fields": [
+            { "type": "DateInterval", "start": "September 2015", "end": "May 2019" },
+            { "type": "strong", "text": "Degree Bachelor" }
+          ]
+        }
+      ]
+    },
+    {
+      "header": { "text": "references", "icon": "user-tie" },
+      "subparts": [
+        {
+          "header": "Jakob Heyder from Ventury Analytics",
+          "fields": ["jakob.heyder@th-nuernberg.de | 0724483162"]
+        },
+        {
+          "header": "Alexis Aho from Webprefer",
+          "fields": ["alexis.aho@bethardgroup.com"]
+        },
+        {
+          "header": "Nina Löfberg from Växjö Kommun/Utbildningsförvaltningen",
+          "fields": ["Växjö kommun, Box 1222, 35112 Växjö | Förvaltningskontoret"]
+        },
+        {
+          "header": "Åsa Tengvall Cedergren from Växjö Kommun/Ledsagning",
+          "fields": ["0728857219"]
+        },
+        {
+          "header": "Olivia S. Nilsson from Burger King",
+          "fields": ["nsprc3011@nspab.com | 0727334540"]
+        }
+      ]
+    }
+  ]
+}

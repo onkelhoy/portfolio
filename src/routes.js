@@ -1,34 +1,27 @@
 import React from 'react';
 import Loadable from 'react-loadable';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 
 import routeInfo from './routes.json';
 import LoadingIndicator from './components/LoadingIndicator'; 
+import Home from 'pages/Home';
+import NotFound from 'pages/NotFound';
 
-const paths = [];
-const loadables = [];
-
-for (let name in routeInfo) {
-  const path = "/" + routeInfo[name];
-
-  const loadableComponent = Loadable({
-    loader: () => import(path),
-    loading: LoadingIndicator,
-  });
-  loadables.push(loadableComponent);
-  paths.push(<Route key={name} path={`/${name}`} component={loadableComponent}/>)
-}
+const CV = Loadable({
+  loader: () => import('pages/CV'),
+  loading: LoadingIndicator,
+});
 
 const Routes = (props) => {
   
   return (
-    <Router>
-      <Switch>
-        {paths}
-      </Switch>
-    </Router>
+    <Switch>
+      <Route path="/CV" component={CV} />
+      <Route 
+        render={() => <NotFound/>} />
+      <Route exect path="/" component={Home} />
+    </Switch>
   );
 };
 
-export { loadables }
 export default Routes;

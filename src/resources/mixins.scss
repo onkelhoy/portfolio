@@ -1,0 +1,22 @@
+// Responsive utils
+$xxl-min-width: 1920px;
+$xxl-max-width: 1919px;
+$xl-min-width: 1520px;
+$xl-max-width: 1519px;
+$md-min-width: 1024px;
+$md-max-width: 1023px;
+$sm-min-width: 768px;
+$sm-max-width: 767px;
+$xs-min-width: 576px;
+$xs-max-width: 575px;
+
+
+@mixin smallest-screen {
+  @media (max-width: $sm-min-width) { @content; }
+}
+@mixin medium-screen {
+  @media (max-width: $xl-max-width) { @content; }
+}
+@mixin big-screen {
+  @media (min-width: $xl-min-width) { @content; }
+}

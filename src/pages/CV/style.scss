@@ -1,0 +1,327 @@
+@import url('https://fonts.googleapis.com/css?family=Titillium+Web:200&display=swap');
+@import '~resources/mixins';
+
+$line-width: 3px;
+$line-color: #444;
+$text-color: #565656;
+
+
+@mixin circle {
+  position: absolute;
+  content: '';
+  width: 13px;
+  height: 13px;
+  background-color: white;
+
+  border: 2px solid $line-color;
+  box-sizing: border-box;
+  border-radius: 50%;
+}
+
+.date-interval {
+  font-size: 14pt;
+  margin-bottom: 0.6em;
+  font-weight: bold;
+  color: #999;
+
+  span.start {
+    margin-right: 1.2em;
+    position: relative;
+
+    &::after {
+      position: absolute;
+      right: -.8em;
+      top: 50%;
+      content: '';
+      width: 0.4em;
+      height: 2px;
+      background-color: #999;
+      transform: translate(-50% -50%);
+    }
+  }
+}
+
+.CV {
+  font-family: 'Titillium Web', sans-serif;
+  display: grid;
+  max-width: 880pt;
+  background-color: white;
+  padding: 8px 15px;
+  box-sizing: border-box;
+  box-shadow: 0 5px 8px rgb(194, 194, 194);
+  
+  grid-template-areas: 
+    "header header"
+    "side main";
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: 12em auto;
+
+  h1 {
+    text-transform: uppercase;
+  }
+
+  button.hamburger {
+    display: none;
+  }
+
+  @include smallest-screen {
+    // background-color: blue;
+    position: relative;
+
+    grid-template-areas: 
+      "header"
+      "main";
+    grid-template-columns: 1fr;
+    padding: 8px 32px;
+
+    .side {
+      position: absolute;
+      z-index: 10;
+      width: 100%;
+      background-color: white;
+      transition: left ease-out 300ms;
+
+      left: -100%;
+    }
+    .header {
+      .field:first-child {
+        display: block;
+      }
+    }
+
+    .hamburger {
+      display: block !important;
+      position: absolute;
+      width: 54px;
+      height: 54px;
+      border: none;
+      
+      font-size: 20pt;
+      background-color: white;
+      color: white;
+      border: none;
+      border-radius: 5px;
+
+      background: linear-gradient(90deg, #d53369 0%, #daae51 100%);
+
+      top: 20px;
+      left: 20px;
+      z-index: 11;
+
+      transition: left ease-out 300ms;
+
+      &:focus {
+        outline: none;
+        background-color: #eee;
+      }
+    }
+
+    &.show {
+      background-color: #ddd;
+      .side {
+        left: 0;
+        border-right: $line-width solid $line-color;
+      }
+      .hamburger {
+        left: calc(100% - 20px - 54px);
+        background: linear-gradient(90deg, #FC466B 0%, #3F5EFB 100%);
+      }
+    }
+  }
+
+  .header {
+    grid-area: header;
+    text-align: center;
+    
+    h1 {
+      margin-bottom: 0.2em;
+      font-size: 34pt;
+    }
+    
+    .field {
+      font-size: 14pt;
+      color: $text-color;
+      display: inline;
+      padding: 0 0.8em;
+    }
+
+    .icon {
+      border-right: 2px solid #bbb;
+
+      position: relative;
+      svg {
+        position: absolute;
+        top: 50%;
+        left: 5px;
+
+        transform: translate(-50%, -50%);
+      }
+    }
+
+    margin-bottom: 2em;
+  }
+  .side {
+    grid-area: side;
+    text-align: center;
+
+    h1 {
+      position: relative;
+      font-size: 19pt;
+      &::before, &::after {
+        @include circle;
+        top: 50%;
+        transform: translateY(-50%);
+        border-width: 1px;
+      }
+
+      &::before {
+        transform: translate(-30px, -50%);
+      }
+
+      &::after {
+        transform: translate(18px, -50%);
+      }
+
+      transform: translateY(3pt)
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    h2 {
+      text-transform: uppercase;
+      color: #aaa;
+      font-size: 12pt;
+      margin-bottom: 0;
+      margin-top: 1.5em;
+    }
+
+    h2 + div {
+      font-weight: 600;
+    }
+
+    &>.part {
+      margin-bottom: 3em;
+      &:last-child {
+        .field {
+          width: calc(80% - 15px);
+          margin-left: 10%;
+        }
+      }
+    }
+
+    .slider { 
+      p {
+        margin-bottom: 0;
+        font-weight: bold;
+        color: $text-color;
+      }
+      input {
+        transform: translateY(-5px);
+        margin: auto;
+        -webkit-appearance: none;
+        position: relative;
+        overflow: hidden;
+        height: $line-width;
+        width: 200px;
+        cursor: pointer;
+        border-radius: 0; /* iOS */
+        
+        &::-webkit-slider-runnable-track {
+          background: #ddd;
+        }
+        
+        /*
+        * 1. Set to 0 width and remove border for a slider without a thumb
+        */
+        &::-webkit-slider-thumb {
+          -webkit-appearance: none;
+          width: 0px; /* 1 */
+          height: 0px;
+          // background: #fff;
+          box-shadow: -100vw 0 0 100vw #444;
+          border: 2px solid #444; /* 1 */
+
+        }
+        
+        &::-moz-range-track {
+          height: $line-width;
+          background: #ddd;
+        }
+        
+        &::-moz-range-thumb {
+          background-color: red;
+          width: 10px;
+          height: 10px;
+        }
+        
+        &::-ms-thumb { 
+          display: none;
+        }
+        
+        &::-ms-ticks-after { 
+          display: none; 
+        }
+        
+        &::-ms-ticks-before { 
+          display: none; 
+        }
+        
+        &::-ms-track { 
+          background: #ddd;
+          color: transparent;
+          height: 40px;
+          border: none;
+        }
+        
+        &::-ms-tooltip { 
+          display: none;
+        }
+      }
+    }
+  }
+  .main {
+    grid-area: main;
+
+    h1 {
+      svg {
+        font-size: 25px;
+        width: 32px;
+        transform: translateX(-50%);
+      }
+
+      margin-bottom: 0;
+      font-size: 22pt;
+
+      &:first-child {
+        margin-bottom: 1em;
+      }
+    }
+
+    h2 {
+      margin-bottom: 0;
+    }
+
+    .field {
+      margin-bottom: 0.6em;
+      color: $text-color;
+      font-weight: bold;
+    }
+
+    &>.part {
+      border-left: $line-width solid $line-color; 
+      padding-left: 36px;
+
+      div.sub-field-1 {
+        position: relative;
+        &::before {
+          @include circle;
+
+          left: -44px;
+          top: 14px;
+        }
+      }
+    }
+  }
+}
