@@ -1,6 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter as Router, Link } from 'react-router-dom';
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { fab } from '@fortawesome/free-brands-svg-icons'
 import { 
@@ -13,17 +12,13 @@ import {
   faTimes,
 } from '@fortawesome/free-solid-svg-icons'
 
-import Routes from './routes';
+import CV from './pages/CV';
 
 library.add(faTimes, faBars, faUser, fab, faSuitcase, faUserTie, faGraduationCap, faMapMarkerAlt);
 
 const App = () => {
 
-  return (
-    <Router>
-      <Routes />
-    </Router>
-  )
+  return <CV />
 }
 
 const root = document.getElementById('root');
