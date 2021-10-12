@@ -13,7 +13,7 @@ import {
   faTimes,
 } from '@fortawesome/free-solid-svg-icons'
 
-import Routes from 'routes';
+import Routes from './routes';
 
 library.add(faTimes, faBars, faUser, fab, faSuitcase, faUserTie, faGraduationCap, faMapMarkerAlt);
 

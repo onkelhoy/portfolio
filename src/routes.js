@@ -8,7 +8,7 @@ import LoadingIndicator from './components/LoadingIndicator';
 // import NotFound from 'pages/NotFound';
 
 const CV = Loadable({
-  loader: () => import('pages/CV'),
+  loader: () => import('./pages/CV'),
   loading: LoadingIndicator,
 });
 

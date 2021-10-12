@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-import Layout from 'components/Layout';
+import Layout from '../../components/Layout';
 
 import './style.scss'; 
 

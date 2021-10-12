@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Titillium+Web:200&display=swap');
-@import '~resources/mixins';
+@import '../../resources/mixins';
 
 $line-width: 3px;
 $line-color: #444;
@@ -30,7 +29,7 @@ $text-color: #565656;
 
     &::after {
       position: absolute;
-      right: -.8em;
+      right: -0.8em;
       top: 50%;
       content: '';
       width: 0.4em;
@@ -49,10 +48,8 @@ $text-color: #565656;
   padding: 8px 15px;
   box-sizing: border-box;
   // box-shadow: 0 5px 8px rgb(194, 194, 194);
-  
-  grid-template-areas: 
-    "header header"
-    "side main";
+
+  grid-template-areas: "header header" "side main";
   grid-template-columns: 1fr 2fr;
   grid-template-rows: 12em auto;
 
@@ -68,9 +65,7 @@ $text-color: #565656;
     // background-color: blue;
     position: relative;
 
-    grid-template-areas: 
-      "header"
-      "main";
+    grid-template-areas: "header" "main";
     grid-template-columns: 1fr;
     padding: 8px 32px;
 
@@ -95,7 +90,7 @@ $text-color: #565656;
       width: 54px;
       height: 54px;
       border: none;
-      
+
       font-size: 20pt;
       background-color: white;
       color: white;
@@ -132,12 +127,12 @@ $text-color: #565656;
   .header {
     grid-area: header;
     text-align: center;
-    
+
     h1 {
       margin-bottom: 0.2em;
       font-size: 34pt;
     }
-    
+
     .field {
       font-size: 14pt;
       color: $text-color;
@@ -167,7 +162,8 @@ $text-color: #565656;
     h1 {
       position: relative;
       font-size: 19pt;
-      &::before, &::after {
+      &::before,
+      &::after {
         @include circle;
         top: 50%;
         transform: translateY(-50%);
@@ -201,7 +197,7 @@ $text-color: #565656;
       font-weight: 600;
     }
 
-    &>.part {
+    & > .part {
       margin-bottom: 3em;
       &:last-child {
         .field {
@@ -211,7 +207,7 @@ $text-color: #565656;
       }
     }
 
-    .slider { 
+    .slider {
       p {
         margin-bottom: 0;
         font-weight: bold;
@@ -227,55 +223,55 @@ $text-color: #565656;
         width: 200px;
         cursor: pointer;
         border-radius: 0; /* iOS */
-        
+
         &::-webkit-slider-runnable-track {
           background: #ddd;
         }
-        
+
         /*
         * 1. Set to 0 width and remove border for a slider without a thumb
         */
         &::-webkit-slider-thumb {
           -webkit-appearance: none;
-          width: 0px; /* 1 */
-          height: 0px;
+          width: 0; /* 1 */
+          height: 0;
           // background: #fff;
           box-shadow: -100vw 0 0 100vw #444;
           border: 2px solid #444; /* 1 */
 
         }
-        
+
         &::-moz-range-track {
           height: $line-width;
           background: #ddd;
         }
-        
+
         &::-moz-range-thumb {
           background-color: red;
           width: 10px;
           height: 10px;
         }
-        
-        &::-ms-thumb { 
+
+        &::-ms-thumb {
           display: none;
         }
-        
-        &::-ms-ticks-after { 
-          display: none; 
+
+        &::-ms-ticks-after {
+          display: none;
         }
-        
-        &::-ms-ticks-before { 
-          display: none; 
+
+        &::-ms-ticks-before {
+          display: none;
         }
-        
-        &::-ms-track { 
+
+        &::-ms-track {
           background: #ddd;
           color: transparent;
           height: 40px;
           border: none;
         }
-        
-        &::-ms-tooltip { 
+
+        &::-ms-tooltip {
           display: none;
         }
       }
@@ -309,8 +305,8 @@ $text-color: #565656;
       font-weight: bold;
     }
 
-    &>.part {
-      border-left: $line-width solid $line-color; 
+    & > .part {
+      border-left: $line-width solid $line-color;
       padding-left: 36px;
 
       div.sub-field-1 {
