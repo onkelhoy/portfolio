@@ -17,7 +17,7 @@ export default (props) => {
         <FontAwesomeIcon icon={!display ? "bars" : "times"}/>
       </button>
       <Section className="header" data={data['header-part']}/>
-      <Section className={"side"}   data={data['side-part']}/>
+      <Section className="side"   data={data['side-part']}/>
       <Section className="main"   data={data['main-part']}/>
     </Layout>
   );

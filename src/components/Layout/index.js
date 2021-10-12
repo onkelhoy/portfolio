@@ -1,5 +1,5 @@
 import React, { useEffect, useState, createContext, } from 'react';
-import Menu from './Menu';
+// import Menu from './Menu';
 import './layout.scss';
 
 const Context = createContext();
