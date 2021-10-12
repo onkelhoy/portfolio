@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import Layout from 'components/Layout';
 
-import './style.scss';
+import './style.scss'; 
 
 import Section from './Section';
 import data from './data.json';

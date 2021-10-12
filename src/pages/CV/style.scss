@@ -44,11 +44,11 @@ $text-color: #565656;
 .CV {
   font-family: 'Titillium Web', sans-serif;
   display: grid;
-  max-width: 880pt;
+  // max-width: 880pt;
   background-color: white;
   padding: 8px 15px;
   box-sizing: border-box;
-  box-shadow: 0 5px 8px rgb(194, 194, 194);
+  // box-shadow: 0 5px 8px rgb(194, 194, 194);
   
   grid-template-areas: 
     "header header"

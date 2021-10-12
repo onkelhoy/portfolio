@@ -8,10 +8,10 @@ const Layout = (props) => {
 
   return (
     <div className="page-container">
-      <header>
+      {/* <header>
         <h1>title</h1>
         <Menu />
-      </header>
+      </header> */}
 
       <main className={className}>
         {children}

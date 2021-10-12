@@ -4,8 +4,8 @@
       "header": "henry pap",
       "fields": [
         "Systems Software Engineer",
-        { "type": "span", "icon": "map-marker-alt", "text": "stockholm, sweden", "className": "uppercase" },
-        "0737471880"
+        { "type": "span", "icon": "map-marker-alt", "text": "Hamburg, Germany", "className": "uppercase" },
+        { "type": "a", "text": "(+46) 0737471880", "href": "tel:+46737471880" }
       ]
     }
   ],
@@ -13,9 +13,9 @@
     {
       "header": "details",
       "fields": [
-        "Stockholm, Sweden",
-        "0737471880",
-        "onkelhoy.job@gmail.com"
+        "Hamburg, Germany",
+        { "type": "a", "text": "(+46) 0737471880", "href": "tel:+46737471880" },
+        { "type": "a", "text": "onkelhoy.job@gmail.com", "href": "mailto:onkelhoy.job@gmail.com" }
       ],
       "subparts": [
         {
@@ -27,7 +27,7 @@
         },
         {
           "header": "nationality",
-          "fields": ["Sweden"]
+          "fields": ["Sweden", "Hungarian"]
         },
         {
           "header": "driving license",
@@ -37,7 +37,10 @@
     },
     {
       "header": "links",
-      "fields": [{ "type": "a", "href": "https://github.com/onkelhoy", "text": "GitHub", "icon": ["fab", "github"] }]
+      "fields": [
+        { "type": "a", "href": "https://github.com/onkelhoy", "text": "GitHub", "icon": ["fab", "github"] },
+        { "type": "a", "href": "https://www.linkedin.com/in/henry-pap-317372171/", "text": "Linkedin", "icon": ["fab", "linkedin"] }
+      ]
     },
     {
       "header": "skills",
@@ -49,13 +52,18 @@
         },
         {
           "type": "Slider",
+          "label": "Typescript",
+          "percentage": 0.9
+        },
+        {
+          "type": "Slider",
           "label": "C#",
-          "percentage": 0.8
+          "percentage": 0.6
         },
         {
           "type": "Slider",
           "label": "Java",
-          "percentage": 0.8
+          "percentage": 0.7
         },
         {
           "type": "Slider",
@@ -65,7 +73,7 @@
         {
           "type": "Slider",
           "label": "React",
-          "percentage": 0.8
+          "percentage": 1
         },
         {
           "type": "Slider",
@@ -75,7 +83,12 @@
         {
           "type": "Slider",
           "label": "Photoshop",
-          "percentage": 1
+          "percentage": 0.7
+        },
+        {
+          "type": "Slider",
+          "label": "Illustrator",
+          "percentage": 0.6
         }
       ]
     },
@@ -88,13 +101,21 @@
     {
       "header": { "text": "profile", "icon": "user" },
       "fields": [
-        "Passionate software engineer, with deep roots in full stack development.",
-        "Fast provider, fast learner, productive and affable"
+        "Passionate software engineer, with deep roots in full stack development. Learning new things - exploring the unknown then sharing my knowledge is what I believe makes me a great employee/colleague.", "I preffer working with Apple computer but Linux OS would also do as I recently gotten into UNIX commands"
       ]
     },
     {
-      "header": { "text": "employmen history", "icon": "suitcase" },
+      "header": { "text": "Employment history", "icon": "suitcase" },
       "subparts": [
+        {
+          "header": "IT consultant at Modis Gmbh, Hamburg",
+          "fields": [
+            { "type": "DateInterval", "start": "February 2020", "end": "Current" },
+            "Worked with different technologies (mainly React), different people, different environments.",
+            "Got to put my knowledge into practice such as project planning, recruitment, teaching and a bit of team leading",
+            "Learned new things about server maintainance & UNIX commands and followed atomical design from a project in Berlin, it has revolutionised my view of react projects."
+          ]
+        },
         {
           "header": "Front-End consult at Ventury Analytics, Stockholm",
           "fields": [
@@ -149,6 +170,10 @@
     {
       "header": { "text": "references", "icon": "user-tie" },
       "subparts": [
+        {
+          "header": "Adama Dolo from Modis Gmbh",
+          "fields": ["adama.dolo@modis.com"]
+        },
         {
           "header": "Jakob Heyder from Ventury Analytics",
           "fields": ["jakob.heyder@th-nuernberg.de | 0724483162"]
